@@ -1,0 +1,33 @@
+address_7amada = {'peter': '0123', 'samir': '0124', 'galal': '0125'}
+
+add["key"] = "val"
+##search for a name
+
+def search_d(name):
+    if name in dict:
+        print(dict[name])
+    else :
+        print("name does not exist in dict")
+
+def add_user(name, phone):
+    address_7amada[name] = phone
+
+
+
+
+def del_user(name):
+    if name in address_7amada:
+        del address_7amada[name]
+        print("name id deleted")
+    else :
+        print("name is not in here")
+
+
+
+def list_users():
+    print(address_7amada)
+
+
+def list_user_pretty():
+    for k,v in address_7amada.items():
+        print("Name:", k , "Number:" , v)

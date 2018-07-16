@@ -1,0 +1,23 @@
+import os
+import sys
+import string
+
+string.ascii_lowercase()
+n = string.ascii_lowercase
+r = n [::-1]
+enc_table = dict(zip(n, r))
+
+def encrypt(line):
+    output = ""
+    for c in line:
+        enc_c = enc_table[c]
+        output += enc_c
+    return output
+
+
+def decrypt(line):
+    output = ""
+    for i in line:
+        dec_i = enc_table[i]
+        output += dec_i
+    return output  
